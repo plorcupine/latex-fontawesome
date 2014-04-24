@@ -8,4 +8,8 @@ with open(INPUT_FILE) as r:
     # Expects to find 'fa-NAME' ending with "
     name = re.findall(r'fa-[^""]*', line)[0]
     # Expects to find '\fSYMBOL' ending with "
-    symbol = re.findall(r'\\f[^"]*', line)[0]
+    symbol = re.findall(r'\\f[^"]*', line)[0][1:].upper()
+
+    camel_case = [w.capitalize() for w in name.split('-')]
+    camel_case[0] = camel_case[0].lower()
+    camel_name = ''.join(camel_case)
