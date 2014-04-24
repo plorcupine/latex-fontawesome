@@ -15,5 +15,5 @@ How to Use
 ### Usage
 1. Download the `fontawesome.sty` file and put it in the same directory as the LaTeX file using the icons.
 2. Include the package as normal (in the preamble of the `.tex` file, add the line `\usepackage{fontawesome}`).
-3. Use an icon by typing \fa<NAME>. For example, to use the `fa-quote-left` icon, convert it to camelcase and prepend the slash: `\faQuoteLeft`.
+3. Use an icon by typing `\faIconName`. For example, to use the `fa-quote-left` icon, convert it to camelcase and prepend the slash: `\faQuoteLeft`.
 
