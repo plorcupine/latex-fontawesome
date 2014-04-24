@@ -3,7 +3,7 @@ latex-fontawesome
 
 Bindings for [FontAwesome](http://fortawesome.github.io/Font-Awesome/) icons to be used in XeLaTeX.
 
-The current version of FontAwesome icons used is 4.0.3.
+The current version of FontAwesome icons used is 4.0.3. See [this](http://www.ctan.org/tex-archive/fonts/fontawesome) for an older version (using FontAwesome version 3.1.1) with better documentation, examples, and for more information.
 
 How to Use
 ----------
