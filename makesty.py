@@ -13,3 +13,9 @@ with open(INPUT_FILE) as r:
     camel_case = [w.capitalize() for w in name.split('-')]
     camel_case[0] = camel_case[0].lower()
     camel_name = ''.join(camel_case)
+
+    name = name.lstrip('fa-')
+    print('\expandafter\def\csname faicon@{name}\endcsname '
+          '{{\symbol{{"{symbol}}}}} \def\{camel_name} '
+          '{{{{\FA\csname faicon@{name}\endcsname}}}}'.format(name=name,
+            camel_name=camel_name, symbol=symbol))
