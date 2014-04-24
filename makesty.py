@@ -2,8 +2,9 @@ import re
 
 # Input file created from http://astronautweb.co/snippet/font-awesome/
 INPUT_FILE = 'htmlfontawesome.txt'
+OUTPUT_FILE = 'fontawesome.sty'
 
-with open(INPUT_FILE) as r:
+with open(INPUT_FILE) as r, open(OUTPUT_FILE, 'w') as w:
   for line in r:
     # Expects to find 'fa-NAME' ending with "
     name = re.findall(r'fa-[^""]*', line)[0]
@@ -18,4 +19,4 @@ with open(INPUT_FILE) as r:
     print('\expandafter\def\csname faicon@{name}\endcsname '
           '{{\symbol{{"{symbol}}}}} \def\{camel_name} '
           '{{{{\FA\csname faicon@{name}\endcsname}}}}'.format(name=name,
-            camel_name=camel_name, symbol=symbol))
+            camel_name=camel_name, symbol=symbol), file=w)
